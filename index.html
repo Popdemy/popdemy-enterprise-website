@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Popdemy Enterprise — Freshly roasted artisan coffee under the Popdemy Coffee brand. African coffee. Global experience."
+  />
+  <title>Popdemy Enterprise | Popdemy Coffee — Home</title>
+
+  <!-- Clean, editorial Google Fonts with system fallbacks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="home">
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ===================== HEADER & NAVIGATION ===================== -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-logo" aria-label="Popdemy Enterprise Home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36" width="32" height="32" fill="none">
+            <circle cx="18" cy="18" r="17" fill="#234B35" stroke="#E8DCC3" stroke-width="1.5" />
+            <ellipse cx="18" cy="18" rx="7" ry="10.5" transform="rotate(-20 18 18)" fill="#E8DCC3" />
+            <path d="M15.5 8.5C18 14 18 22 20.5 27.5" stroke="#75452D" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>POPDEMY ENTERPRISE</strong>
+          <small>African coffee. Global experience.</small>
+        </span>
+      </a>
+
+      <div class="nav-actions">
+        <!-- Mobile menu toggle -->
+        <button
+          id="mobile-menu-toggle"
+          class="mobile-toggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+          <a href="#coffee-collection" class="btn btn-primary btn-sm nav-cta">Shop Now</a>
+        </nav>
+
+        <!-- Shopping Cart Trigger -->
+        <button
+          id="cart-toggle-btn"
+          class="cart-button"
+          type="button"
+          aria-label="Open shopping cart"
+          aria-controls="cart-drawer"
+          aria-expanded="false"
+        >
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 01-8 0" />
+          </svg>
+          <span class="cart-label">Cart</span>
+          <span id="cart-count" class="cart-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ===================== HERO SECTION ===================== -->
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="hero-eyebrow">African coffee. Global experience.</p>
+        <h1 class="hero-title">POPDEMY COFFEE</h1>
+        <p class="hero-tagline">Freshly roasted artisan coffee, delivered to your doorstep.</p>
+        <p class="hero-subtitle">
+          Discover quality coffee, carefully sourced and prepared for coffee lovers.
+        </p>
+        <div class="hero-buttons">
+          <a href="#coffee-collection" class="btn btn-primary">Shop Our Coffee</a>
+          <a href="about.html" class="btn btn-outline-light">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== OUR COFFEE COLLECTION ===================== -->
+    <section id="coffee-collection" class="section section-cream">
+      <div class="container">
+        <div class="section-header collection-header">
+          <div>
+            <span class="section-tag">Our Coffee Collection</span>
+            <h2>Crafted Under POPDEMY COFFEE</h2>
+            <p class="section-lead">
+              Explore our five artisan coffee categories sourced from Ugandan producers,
+              roasted and packaged under the Popdemy Coffee brand.
+            </p>
+          </div>
+
+          <!-- Currency Toggle (UGX / USD Demonstration) -->
+          <div class="currency-box" role="group" aria-label="Select display currency">
+            <span class="currency-title">Display Currency:</span>
+            <div class="currency-buttons">
+              <button type="button" class="currency-btn active" data-currency="UGX">UGX</button>
+              <button type="button" class="currency-btn" data-currency="USD">USD</button>
+            </div>
+            <small id="currency-note" class="currency-note">
+              Demo rate: 1 USD = 3,700 UGX (configurable)
+            </small>
+          </div>
+        </div>
+
+        <!-- Honest Notice for Sample Pricing -->
+        <div class="demo-banner" role="note">
+          <strong>Sample Pricing Notice:</strong> Prices displayed below are
+          <strong>SAMPLE PRICES</strong> configured for cart and checkout testing only.
+          Official retail pricing will be confirmed prior to commercial launch.
+        </div>
+
+        <!-- Product Grid populated cleanly from central config in script.js -->
+        <div id="product-grid" class="product-grid">
+          <noscript>
+            <p>Please enable JavaScript to view the interactive Popdemy Coffee catalogue and shopping cart.</p>
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WHY CHOOSE POPDEMY COFFEE ===================== -->
+    <section class="section section-beige">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="section-tag">Our Promise</span>
+          <h2>Why Choose Popdemy Coffee?</h2>
+          <p class="section-lead">
+            Popdemy Enterprise connects dedicated Ugandan coffee production with an elevated,
+            modern coffee experience.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">01</div>
+            <h3>Carefully Sourced Coffee</h3>
+            <p>
+              We work with different Ugandan coffee producers and selected suppliers to source
+              dependable, quality harvests.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">02</div>
+            <h3>Freshness and Quality</h3>
+            <p>
+              Selected batches are roasted and packaged carefully under the Popdemy Coffee name
+              with attention to aroma and consistency.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">03</div>
+            <h3>African Coffee Identity</h3>
+            <p>
+              Rooted in Uganda and proud of African coffee heritage, crafted to meet the
+              expectations of coffee drinkers everywhere.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">04</div>
+            <h3>Convenient Ordering</h3>
+            <p>
+              Browse whole beans, ground coffee, gift sets, ready-to-drink bottles, and instant
+              options in one straightforward online storefront.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">05</div>
+            <h3>Delivery Ambitions</h3>
+            <p>
+              Designed to serve coffee lovers across Uganda, wider Africa, and international
+              destinations as logistics partnerships launch.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT POPDEMY PREVIEW ===================== -->
+    <section id="about-preview" class="section section-cream">
+      <div class="container split-layout">
+        <div class="split-media">
+          <div class="image-frame">
+            <img
+              src="https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=1000&q=80"
+              alt="Artisan pour-over preparation representing Popdemy Enterprise coffee craft"
+              loading="lazy"
+            />
+            <div class="image-caption-badge">POPDEMY ENTERPRISE</div>
+          </div>
+        </div>
+
+        <div class="split-content">
+          <span class="section-tag">About Popdemy Enterprise</span>
+          <h2>African Coffee. Global Experience.</h2>
+          <p>
+            Popdemy Enterprise is an artisan coffee business built around a straightforward model:
+            sourcing coffee from Ugandan producers, roasting and packaging selected products under
+            the <strong>Popdemy Coffee</strong> brand, collaborating with trusted suppliers, and
+            serving customers directly.
+          </p>
+          <p>
+            Our ambition is to bridge local Ugandan coffee craftsmanship with coffee enthusiasts
+            across Africa and around the world.
+          </p>
+          <a href="about.html" class="btn btn-secondary">Read About Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DELIVERY INFORMATION ===================== -->
+    <section id="delivery-info" class="section section-forest">
+      <div class="container">
+        <div class="section-header centered light-text">
+          <span class="section-tag tag-light">Delivery &amp; Shipping Plans</span>
+          <h2>Bringing Popdemy Coffee to Your Doorstep</h2>
+          <p class="section-lead">
+            Popdemy Enterprise intends to serve customers across Uganda, across Africa, and
+            internationally. Delivery arrangements are currently in preparation.
+          </p>
+        </div>
+
+        <div class="delivery-grid">
+          <article class="delivery-card">
+            <h3>Uganda</h3>
+            <p>
+              Planned local and nationwide doorstep delivery for orders placed within Uganda.
+            </p>
+          </article>
+
+          <article class="delivery-card">
+            <h3>Other African Countries</h3>
+            <p>
+              Intended regional shipping options connecting Ugandan-roasted Popdemy Coffee with
+              customers across the continent.
+            </p>
+          </article>
+
+          <article class="delivery-card">
+            <h3>International Customers</h3>
+            <p>
+              Global delivery ambitions designed to bring African artisan coffee to international
+              households.
+            </p>
+          </article>
+        </div>
+
+        <div class="delivery-footnote">
+          <p>
+            <strong>How Delivery Costs Will Work:</strong> Delivery charges are intended to be
+            calculated based on your <strong>destination</strong>, total
+            <strong>package weight</strong>, and available courier or shipping rates.
+            <em>Note: Courier partnerships and worldwide shipping arrangements are not yet
+            operational; any shipping figures shown in checkout are configurable sample estimates.</em>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== INTEGRATED CHECKOUT SECTION ===================== -->
+    <section id="checkout-section" class="section section-beige">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Demonstration Checkout</span>
+          <h2>Order Summary &amp; Checkout Preview</h2>
+          <p class="section-lead">
+            Review your Popdemy Coffee cart, select an intended delivery destination to preview
+            weight-based sample shipping estimates, and explore our planned payment options.
+          </p>
+        </div>
+
+        <div class="demo-banner warning" role="note">
+          <strong>Important Checkout Notice:</strong> This is a <strong>demonstration checkout</strong>.
+          Real payments are not active, no real orders are charged, and we do <strong>not</strong>
+          collect card details or mobile money PINs. Payment processing will be activated only after
+          integration with an authorised payment provider.
+        </div>
+
+        <div class="checkout-layout">
+          <!-- Left: Order Summary -->
+          <div class="checkout-card">
+            <h3>1. Order &amp; Weight Summary</h3>
+            <div id="checkout-empty-note" class="empty-state">
+              <p>Your shopping cart is currently empty. Add Popdemy Coffee products above to test checkout.</p>
+              <a href="#coffee-collection" class="btn btn-sm btn-primary">Browse Coffee</a>
+            </div>
+
+            <ul id="checkout-items" class="checkout-item-list"></ul>
+
+            <div class="summary-totals">
+              <div class="summary-row">
+                <span>Estimated Package Weight:</span>
+                <strong id="checkout-weight">0.00 kg</strong>
+              </div>
+              <div class="summary-row">
+                <span>Items Subtotal (Sample Prices):</span>
+                <strong id="checkout-subtotal">UGX 0</strong>
+              </div>
+              <div class="summary-row">
+                <span>Sample Shipping Estimate:</span>
+                <strong id="checkout-shipping">UGX 0</strong>
+              </div>
+              <div class="summary-row total-row">
+                <span>Estimated Demo Total:</span>
+                <strong id="checkout-total">UGX 0</strong>
+              </div>
+              <p class="summary-disclaimer">
+                Shipping figures are configurable estimates (not confirmed courier rates).
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Delivery Details & Planned Payment Methods -->
+          <form id="checkout-form" class="checkout-card" novalidate>
+            <h3>2. Delivery &amp; Planned Payment</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="checkout-name">Full Name <span class="required">*</span></label>
+                <input type="text" id="checkout-name" name="customerName" placeholder="Your full name" required />
+              </div>
+              <div class="form-group">
+                <label for="checkout-email">Email Address <span class="required">*</span></label>
+                <input type="email" id="checkout-email" name="customerEmail" placeholder="name@example.com" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="checkout-country">Delivery Destination <span class="required">*</span></label>
+                <select id="checkout-country" name="deliveryDestination" required>
+                  <option value="uganda">Uganda (Sample Local Rate)</option>
+                  <option value="africa">Other African Countries (Sample Regional Rate)</option>
+                  <option value="international">International Destinations (Sample Global Rate)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="checkout-city">City / Country Details <span class="required">*</span></label>
+                <input type="text" id="checkout-city" name="deliveryCity" placeholder="e.g., Kampala, Uganda" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="checkout-address">Street / Delivery Address <span class="required">*</span></label>
+              <input
+                type="text"
+                id="checkout-address"
+                name="deliveryAddress"
+                placeholder="Building, street, or delivery instructions"
+                required
+              />
+            </div>
+
+            <fieldset class="payment-fieldset">
+              <legend>3. Intended Payment Methods (Planned — Not Yet Active)</legend>
+              <p class="fieldset-note">
+                Select an intended payment method below. Do not enter PINs or card numbers.
+              </p>
+
+              <div class="payment-options">
+                <label class="payment-option">
+                  <input type="radio" name="paymentMethod" value="MTN Mobile Money" checked />
+                  <span>
+                    <strong>MTN Mobile Money</strong>
+                    <small>Planned mobile money integration (no PIN requested)</small>
+                  </span>
+                </label>
+
+                <label class="payment-option">
+                  <input type="radio" name="paymentMethod" value="Airtel Money" />
+                  <span>
+                    <strong>Airtel Money</strong>
+                    <small>Planned mobile money integration (no PIN requested)</small>
+                  </span>
+                </label>
+
+                <label class="payment-option">
+                  <input type="radio" name="paymentMethod" value="Debit and Credit Cards" />
+                  <span>
+                    <strong>Debit and Credit Cards</strong>
+                    <small>Planned secure card gateway integration (no card details collected here)</small>
+                  </span>
+                </label>
+
+                <label class="payment-option">
+                  <input type="radio" name="paymentMethod" value="International Payment Options" />
+                  <span>
+                    <strong>International Payment Options</strong>
+                    <small>Planned global checkout provider integration</small>
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn-primary btn-full">
+              Preview Demonstration Order
+            </button>
+
+            <div id="checkout-feedback" class="form-feedback" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== NEWSLETTER SECTION ===================== -->
+    <section class="section section-cream">
+      <div class="container">
+        <div class="newsletter-box">
+          <div class="newsletter-copy">
+            <span class="section-tag">Newsletter Preview</span>
+            <h2>Stay Updated on Popdemy Coffee</h2>
+            <p>
+              Sign up to preview our upcoming launch updates, new roasts, and delivery announcements.
+              <em>(Demonstration interface only — no mailing-list service is currently connected.)</em>
+            </p>
+          </div>
+
+          <form id="newsletter-form" class="newsletter-form" novalidate>
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input
+              type="email"
+              id="newsletter-email"
+              name="newsletterEmail"
+              placeholder="Enter your email address"
+              required
+            />
+            <button type="submit" class="btn btn-secondary">Subscribe (Demo)</button>
+            <div id="newsletter-feedback" class="form-feedback newsletter-feedback" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>POPDEMY ENTERPRISE</h3>
+        <p class="footer-positioning">African coffee. Global experience.</p>
+        <p>
+          Freshly roasted artisan coffee under the <strong>Popdemy Coffee</strong> brand,
+          sourced from Ugandan coffee producers and prepared with care.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#coffee-collection">Shop Popdemy Coffee</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:info@popdemyenterprise.com">info@popdemyenterprise.com</a></li>
+          <li><strong>Phone:</strong> <a href="tel:+256726437383">+256 726 437 383</a></li>
+          <li><strong>WhatsApp:</strong> <a href="https://wa.me/256726437383" target="_blank" rel="noopener noreferrer">Chat with us</a></li>
+          <li><strong>Head Office:</strong> Odokomit, Lira City, Uganda</li>
+          <li><strong>Other Branches:</strong> Kampala, Gulu, Soroti, Mbale and Jinja</li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h4>Social Channels</h4>
+        <ul>
+          <li><a href="contact.html#contact-channels">Facebook Page (Placeholder)</a></li>
+          <li><a href="contact.html#contact-channels">WhatsApp Channel (Placeholder)</a></li>
+          <li><a href="contact.html#contact-channels">Instagram (Placeholder)</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span class="current-year"></span> Popdemy Enterprise. All rights reserved.</p>
+        <p>Product Brand: <strong>POPDEMY COFFEE</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== SLIDE-OVER SHOPPING CART DRAWER ===================== -->
+  <div id="cart-backdrop" class="cart-backdrop" hidden></div>
+  <aside
+    id="cart-drawer"
+    class="cart-drawer"
+    aria-label="Shopping cart"
+    aria-hidden="true"
+  >
+    <div class="cart-drawer-header">
+      <div>
+        <h3>Your Popdemy Coffee Cart</h3>
+        <small>Saved automatically in your browser</small>
+      </div>
+      <button id="cart-close-btn" class="icon-close-btn" type="button" aria-label="Close shopping cart">
+        &times;
+      </button>
+    </div>
+
+    <div class="cart-drawer-body">
+      <div id="cart-drawer-empty" class="empty-state">
+        <p>Your cart is empty.</p>
+        <p class="muted">Explore our Popdemy Coffee collection to add items.</p>
+      </div>
+      <ul id="cart-drawer-items" class="cart-items-list"></ul>
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="summary-row">
+        <span>Total Weight (Est.):</span>
+        <strong id="cart-drawer-weight">0.00 kg</strong>
+      </div>
+      <div class="summary-row total-row">
+        <span>Sample Subtotal:</span>
+        <strong id="cart-drawer-subtotal">UGX 0</strong>
+      </div>
+      <p class="drawer-note">Sample prices shown. Delivery calculated at checkout.</p>
+      <a id="drawer-checkout-btn" href="#checkout-section" class="btn btn-primary btn-full">
+        Proceed to Checkout
+      </a>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
